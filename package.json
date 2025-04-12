@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start:dev": "nodemon server.js",
+    "start": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js"
   },
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "mongoose": "^8.13.2",
     "morgan": "^1.10.0"
   }
 }
