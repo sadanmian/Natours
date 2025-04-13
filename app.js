@@ -2,8 +2,11 @@ const express = require('express');
 const morgan = require('morgan');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
+const qs = require('qs');
 
 const app = express();
+// Set a custom query parser using qs
+app.set('query parser', (str) => qs.parse(str));
 
 // 1) Middlewares
 if (process.env.NODE_ENV === 'development') {
